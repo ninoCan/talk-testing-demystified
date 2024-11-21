@@ -4,6 +4,19 @@ title: "Testing Demystified: the boring, the hard, the practical"
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+  :root {
+    --r-background-color: rgb(33, 34, 44);
+    --grey: rgb(65, 69, 88);
+    --white: rgb(248, 248, 242);
+    --cyan: rgb(128, 255, 234);
+    --green: rgb(138, 255, 128);
+    --r-heading-color: rgb(255, 202, 128);
+    --pink: rgb(255, 128, 191);
+    --r-main-color: rgb(149, 128, 255);
+    --red: rgb(255, 149, 128);
+    --yellow: rgb(255, 255, 128);
+     #FF80BF;
+  }
   .column {
     float: left;
     width: 50%;
@@ -17,6 +30,9 @@ title: "Testing Demystified: the boring, the hard, the practical"
   .gif {
     height: 240px;
     width: 360px;
+  }
+  .color-red {
+    color: var(--red);
   }
 </style>
 
@@ -70,6 +86,10 @@ Big Data Engineer<br/>
 
 ---
 
+<h2><span class="color-red">Question:</span> How many of you practice testing on their deliverable?</h2>
+
+---
+
 # Hard
 
 ---
@@ -78,7 +98,7 @@ Big Data Engineer<br/>
 
 ---
 
-# Time-consuming
+# Practical
 
 ---
 
