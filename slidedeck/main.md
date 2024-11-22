@@ -31,8 +31,14 @@ title: "Testing Demystified: the boring, the hard, the practical"
     height: 240px;
     width: 360px;
   }
-  .color-red {
+  li {
+    line-height: 2em;
+  }
+  emph {
     color: var(--red);
+  }
+  .lc {
+    text-transform: lowercase;
   }
 </style>
 
@@ -86,11 +92,54 @@ Big Data Engineer<br/>
 
 ---
 
-<h2><span class="color-red">Question:</span> How many of you practice testing on their deliverable?</h2>
+<h2><emph>Question:</emph> How many of you practice testing on their deliverables?</h2>
+
+---
+
+<h2><emph>Eye-ball test</emph> is the most common way of testing</h2>
+
+---
+
+<h2>Blueprint &amp; documentation</h2>
+<div class=column>
+<img class="gif" src="https://media0.giphy.com/media/9xmjP6FkdINCA6Ucp4/200.gif ">
+</div>
+<div class=column>
+<ol style="margin: 30px 0px;">
+  <li>Freeze requirements</li>
+  <li>Example of usage</li>
+  <li>Enable repeatability</li>
+</ol>
+</div>
 
 ---
 
 # Hard
+
+---
+
+<h2><emph>POV:</emph> Testing is misundestood</h2>
+<div class="column">
+<img src="" class="gif">
+</div>
+<div class="column">
+<ul>
+  <li>More complex than it should be</li>
+  <li>Opaque jargon</li>
+  <li>6 <strong>elementary</strong> blocks</li>
+</ul>
+</div>
+
+---
+
+<h2>test suites are bags of test cases</h2>
+
+A case is just a set of `expected == actual`<br/>
+(refrain to overload with expectations)
+
+---
+
+<h2>3 <emph style="font-size: larger;">A</emph><span class=lc >s</span>: <emph>A</emph><span class="lc">rrage</span>, <emph>A</emph><span class="lc">ct</span>, <emph>A</emph><span class="lc">ssert</span> </h2>
 
 ---
 
@@ -102,6 +151,4 @@ Big Data Engineer<br/>
 
 ---
 
-
-
-
+# Thank you!

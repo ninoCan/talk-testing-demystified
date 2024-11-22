@@ -1,0 +1,21 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 128" width="218" height="128">
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style class="style-fonts">
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://file%2B.vscode-resource.vscode-cdn.net/home/nino/.vscode/extensions/pomdtr.excalidraw-editor-3.7.4/public//dist/excalidraw-assets/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://file%2B.vscode-resource.vscode-cdn.net/home/nino/.vscode/extensions/pomdtr.excalidraw-editor-3.7.4/public//dist/excalidraw-assets/Cascadia.woff2");
+      }
+      @font-face {
+        font-family: "Assistant";
+        src: url("https://file%2B.vscode-resource.vscode-cdn.net/home/nino/.vscode/extensions/pomdtr.excalidraw-editor-3.7.4/public//dist/excalidraw-assets/Assistant-Regular.woff2");
+      }
+    </style>
+    
+  </defs>
+  <g stroke-linecap="round" transform="translate(10 10) rotate(0 99 54)"><path d="M27 0 C65.65 -1.16, 105.98 3.67, 171 0 C192.4 -3.33, 194.87 12.38, 198 27 C195.3 45.52, 196.48 63.43, 198 81 C194.53 95.63, 188.58 111.37, 171 108 C133.05 106.05, 88.19 103.35, 27 108 C5.51 105.75, -0.34 95.48, 0 81 C-1.15 64.98, 1.66 39.45, 0 27 C0.28 7.66, 10.98 -1.98, 27 0" stroke="none" stroke-width="0" fill="#ff80bf"></path><path d="M27 0 C80.86 -0.67, 132.33 -1.57, 171 0 M27 0 C57.95 -0.49, 89.49 0.66, 171 0 M171 0 C189.57 -0.77, 197.92 8.19, 198 27 M171 0 C191.01 -0.93, 197.13 9.77, 198 27 M198 27 C197.27 42.07, 198.81 59.6, 198 81 M198 27 C197.74 39.59, 197.24 53.23, 198 81 M198 81 C198.32 97.44, 187.41 108.01, 171 108 M198 81 C198.38 96.91, 187.59 107.42, 171 108 M171 108 C118.09 110.47, 62.45 110.43, 27 108 M171 108 C114.09 108.61, 58.96 107.36, 27 108 M27 108 C8.79 107.27, -0.95 97.78, 0 81 M27 108 C10.26 107.3, -0.56 97.09, 0 81 M0 81 C-1.47 62.27, 0.44 43.6, 0 27 M0 81 C-0.34 63.84, 0.2 47.65, 0 27 M0 27 C1.9 9.43, 8.23 1.6, 27 0 M0 27 C1.91 8.46, 8.03 1.92, 27 0" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g><g transform="translate(81 26) rotate(0 26.459976196289062 37.5)"><text x="26.459976196289062" y="0" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#6741d9" text-anchor="middle" style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">DEV</text><text x="26.459976196289062" y="25" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#6741d9" text-anchor="middle" style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">WITH</text><text x="26.459976196289062" y="50" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#6741d9" text-anchor="middle" style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">OCD</text></g></svg>
