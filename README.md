@@ -27,6 +27,6 @@ If you have any feedback, please reach out to me!
 
 - [The Practical Testing Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)
 - [The continuum of test doubles](https://learn.microsoft.com/en-us/archive/msdn-magazine/2007/september/unit-testing-exploring-the-continuum-of-test-doubles)
-
+- [Cypress Core concepts](https://docs.cypress.io/app/core-concepts/testing-types#What-is-E2E-Testing)
 
 
