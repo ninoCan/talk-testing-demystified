@@ -17,9 +17,27 @@ title: "Testing Demystified: the boring, the hard, the practical"
     --yellow: rgb(255, 255, 128);
      #FF80BF;
   }
+  .larger {
+    font-size: larger;
+  }
+  .small {
+    font-size: 90%;
+  }
+  .small-column {
+    float: left;
+    width: 25%;
+  }
+  .third-column {
+    float: left;
+    width: 33%;
+  }
   .column {
     float: left;
     width: 50%;
+  }
+  .large-column {
+    float: left;
+    width: 75%;
   }
   h1 {
     font-weight: 100;
@@ -40,14 +58,30 @@ title: "Testing Demystified: the boring, the hard, the practical"
   .lc {
     text-transform: lowercase;
   }
+  .tips {
+    padding: 0; /* Reset padding for the list */
+    margin: 0;
+  }
+  .tips li {
+    list-style: none; /* Remove default bullets */
+    position: relative; /* Allow positioning of the pseudo-element */
+    padding-left: 75px; /* Space for "TIP:" */
+  }
+  .tips li::before {
+    content: "TIP:"; /* Add the "TIP:" text */
+    position: absolute;
+    left: 0;
+    font-style: italic; /* Style as emphasized text */
+    font-weight: bold;
+    color:var(--green)
+  }
 </style>
 
 
-<h1 style="white-space: nowrap">Testing Demystified:</h1>
-<h2>the boring,</h1>
-<h2>the hard,</h1>
-<h2>the practical</h1>
-
+<h1 style="white-space: nowrap"><emph>Testing Demystified:</emph></h1>
+<h2><em>the boring,</em></h1>
+<h2><strong style="color: var(--r-main-color);">the hard,</strong><h1>
+<h2 style="text-decoration: underline; color: var(--green)">the practical</h1>
 
 ---
 
@@ -76,27 +110,25 @@ Big Data Engineer<br/>
 ---
 
 <h2 style="white-space: nowrap">Testing Misconceptions</h1>
-
-
 <div class="column">
 <img class="gif" src="https://i.giphy.com/lJnAXeJO8tE7E37mxq.webp">
 </div>
-
 <div class="column">
 <img class="gif" src="https://media4.giphy.com/media/3o7btPCcdNniyf0ArS/200.gif">
 </div>
-
 <div>
 <img class="gif" src="https://media.tenor.com/IXY41b20EwMAAAAM/time-speed.gif"/>
 </div>
 
 ---
 
-<h2><emph>Question:</emph> How many of you practice testing on their deliverables?</h2>
+## <emph>Question:</emph> How many of you practice testing on their deliverables?
 
 ---
 
-<h2><emph>Eye-ball test</emph> is the most common way of testing</h2>
+## <emph>Eye-ball test</emph>
+## is the most common
+## way of testing
 
 ---
 
@@ -114,38 +146,170 @@ Big Data Engineer<br/>
 
 ---
 
-# Hard
+<h2>why should we <emph class="larger;">prepare</emph> tests?</h2>
+
+<ul>
+  <li>enable rapid <emph class="larger">rework</emph></li>
+  <li><emph>validate</emph> the work</li>
+  <li>Remove the <emph class="larger">ego</emph></li>
+</ul>
 
 ---
 
-<h2><emph>POV:</emph> Testing is misundestood</h2>
+# <strong style="color: var(--r-main-color);">Hard</strong>
+
+---
+
+## Symptoms
+
 <div class="column">
 <img src="" class="gif">
 </div>
 <div class="column">
 <ul>
-  <li>More complex than it should be</li>
-  <li>Opaque jargon</li>
-  <li>6 <strong>elementary</strong> blocks</li>
+  <li>Different <emph>layers</emph></li>
+  <li>Opaque <emph>jargon</emph></li>
+  <li>Made more <emph>complex</emph></li>
+  <li><emph>Elementary</emph> blocks</li>
 </ul>
 </div>
 
 ---
 
-<h2>test suites are bags of test cases</h2>
+# <emph>Tests layers</emph>
 
-A case is just a set of `expected == actual`<br/>
-(refrain to overload with expectations)
+<div class="third-column">
+  <h2 style="color: var(--pink);">Unit</h2>
+<ul style="color: var(--pink);">
+  <li>finer detail</li>
+  <li>isolation</li>
+  <li>faster</li>
+  <li>brittle</li>
+</ul>
+</div>
+<div class="third-column">
+  <h2 style="color: var(--green);">Integration</h2>
+<ul style="color: var(--green);">
+  <li>interfaces</li>
+  <li>behavioural</li>
+  <li>fast/slow</li>
+  <li>durable</li>
+</ul>
+</div>
+<div class="third-column">
+  <h2 style="color: var(--cyan)">End-to-end</h2>
+<ul style="color: var(--cyan);">
+  <li>processes</li>
+  <li>enseble</li>
+  <li>slow</li>
+  <li>error-prone</li>
+</ul>
+</div>
 
 ---
 
-<h2>3 <emph style="font-size: larger;">A</emph><span class=lc >s</span>: <emph>A</emph><span class="lc">rrage</span>, <emph>A</emph><span class="lc">ct</span>, <emph>A</emph><span class="lc">ssert</span> </h2>
+# <emph>Question:</emph> What is the right proportion?
 
 ---
 
-# Boring
+
+<div class="third-column"><img style="height:180px;" style="height: 240px;" src="assets/test-shapes/reverse-pyramid.svg"></div>
+<div class="third-column"><img style="height:180px;" src="assets/test-shapes/pyramid.svg"></div>
+<div class="third-column"><img style="height:180px;" src="assets/test-shapes/diamond.svg"></div>
+<div>
+<span style="opacity: 0; margin-top: -100px;">This is needed to correctly render the title!</span>
+  <h1>
+    It depends!</emph>
+  </h1>
+</div>
+<div class="third-column"><img src="assets/test-shapes/ocd-dev.svg"></div>
+<div class="third-column"><img src="assets/test-shapes/true-diamond.svg"></div>
+<div class="third-column"><img src="assets/test-shapes/summer-intern.svg"></div>
 
 ---
+
+# <em>Boring</em>
+
+---
+
+## <span style="color: var(--green);">Feature</span> not a<emph> bug</emph>
+<img src="https://i.imgflip.com/9beamx.jpg"
+style="clip-path: inset(2% 2% 2% 2% round 5%)"
+/>
+
+---
+
+<div class="large-column">
+<h2>What is a <emph>test suite</emph>?</h2>
+</div>
+
+<div class="small-column">
+<img src="https://img.freepik.com/premium-vector/hand-drawn-playing-cards-icon-sticker-style-vector-illustration_755164-11343.jpg?w=740" style="width:240px; margin-top: -20px" />
+</div>
+
+A <emph>Test Case</emph> is just a set of boolean fuctions
+```
+class TestSuite:
+
+  func testCase1 { actual == expected }
+
+  func testCase2 {
+    actual == expectation_1
+    actual.part == expectation_2
+  }
+
+```
+<ul class="tips">
+  <li>DON'T use too many expectations<br></li>
+  <li>cluster similar behaviour</li>
+</ul>
+
+---
+
+## The 3 <emph class="larger">A</emph>s framework
+
+<div class="column">
+  <ul>
+    <li>
+      <emph class="larger">A</emph><emph class="small">RRANGE</emph><br>
+      &nbsp;prepare the elements
+    </li>
+    <li>
+      <emph class="larger">A</emph><emph class="small">CT</emph><br>
+      &nbsp;let the music play
+    </li>
+    <li>
+      <emph class="larger">A</emph><emph class="small">SSERT</emph><br>
+    </li>
+  </ul>
+</div>
+<div class="column">
+
+```
+class TestSuite:
+
+  func testCase {
+    # Arrange
+    under_test = greet
+    expected = "Hello, World!"
+
+    # Act
+    actual = under_test()
+
+    # Assert
+    actual == expected
+  }
+
+```
+
+</div>
+
+  <ul class="tips">
+    <li>call the subject <strong>underTest</strong></li>
+  </ul>
+
+---
+
 
 # Practical
 

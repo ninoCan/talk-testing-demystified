@@ -13,7 +13,7 @@ going to deliver in:
 
 **Draft:** Excalidraw
 
-**Slide-Deck:** RevealJS, Markdown
+**Slide-Deck:** RevealJS, Markdown, HTML &amp; CSS
 
 ## Authors
 
@@ -22,6 +22,11 @@ If you have any feedback, please reach out to me!
 - [@ninoCan](https://www.github.com/ninoCan)
 
 
+# Useful Reading
+
+
+- [The Practical Testing Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)
+- [The continuum of test doubles](https://learn.microsoft.com/en-us/archive/msdn-magazine/2007/september/unit-testing-exploring-the-continuum-of-test-doubles)
 
 
 
