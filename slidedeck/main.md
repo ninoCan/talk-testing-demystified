@@ -5,11 +5,20 @@ data-background-image: https://www.shadertoy.com/embed/McyyW3?gui=true&t=10&paus
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fontawesome.com/icons/cards?f=classic&s=solid">
+<link rel="stylesheet" href="plugin/highlight/base16-dracula.css" />
+<script src="plugin/highlight/highlight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/gherkin.min.js" integrity="sha512-U8Y+a87b+PcvHrlnMoAFHYt9WQPvZbKNt89RUlEuMSLyGlln/e7G66v6NwF4Gopm0/X4ZYYgUY8mD3WdMOr2UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  Reveal.initialize({
+    plugins: [RevealHighlight],
+  });
+</script>
 <style>
   :root {
     --r-background-color: rgb(33, 34, 44);
     --grey: rgb(65, 69, 88);
     --white: rgb(248, 248, 242);
+    --blue: rgb(106, 154, 224);
     --cyan: rgb(128, 255, 234);
     --green: rgb(138, 255, 128);
     --r-heading-color: rgb(255, 202, 128);
@@ -376,7 +385,7 @@ assert actual == expected
 <div class="column">
 
 <pre class="rounded" style="block-size: 475px;">
-<code># Arrange
+<code class="language-python"># Arrange
 under_test = Car
 t_dummy = 15
 a_stub = Rolling_mat(
@@ -425,15 +434,15 @@ assert actual == expected
    block-size: 445px;
    width: fit-content;"
   >
-    <code style="overflow: visible;"># Arrange
+    <code class="language-python" style="overflow: visible;"># Arrange
 under_test = PaymentService
 message_dummy = "Insufficent funds"
 url_stub = "https://external.service"
-request_mock = Wiremock
-    .get(url_stub)
-    .return(
-      code=404, message=message_dummy
-    )
+request_mock = Mock.get(url_stub)
+  .return_value(
+    code=404,
+    message=message_dummy
+  )
 sum_dummy = "1.000.000€"
 # Act
 actual = PaymentService.withdraw(
@@ -506,7 +515,7 @@ expected = under_test(data_dummy)
 # Assert
 assert result == expected
 assert mailerService.send
-  .wasCalledOnceWith(
+  .called_once_with(
   "Welcome, Alice",
   "alice@example.com"
 )
@@ -545,7 +554,7 @@ assert mailerService.send
 <div class="column">
   <pre style="width: fit-content;
   height: 450px;
-  "><code style="overflow: visible;">#Arrange
+  "><code class="language-python" style="overflow: visible;">#Arrange
 under_test = UserRegistrationService
 data_fake = new Faker({
   "name": generate_name(),
@@ -631,7 +640,7 @@ assert query == 1
 ---
 
 <h2 class="larger" style="color: var(--green);">
-  <emph>T</emph>est <emph>D</emph>riven <emph>D</emph>evelopment
+  <emph class="larger">T</emph>est-<emph class="larger">D</emph>riven <emph class="larger">D</emph>evelopment
 </h2>
 
 <span class="small" style="color: var(--r-heading-color);">
@@ -653,7 +662,7 @@ Write tests before even starting writing a single line of code!</span>
 ---
 
 <h2 style="color: var(--green);">
-  <emph class="lc">t</emph><span class="lc">he</span> <emph>D</emph>EBUGGER <emph class="lc">D</emph><span class="lc">rives</span>
+  <emph class="lc larger">t</emph><span class="lc">he</span> <emph class="larger">D</emph>EBUGGER <emph class="lc larger">D</emph><span class="lc">rives</span>
 </h2>
 
 <span class="small" style="color: var(--r-heading-color);">
@@ -663,7 +672,7 @@ Setup a minimal working runtime to start a debugger session!
 <div class="column">
   <ul>
     <li>Write a minimal entrypoint</li>
-    <li>Start the debugger</li>
+    <li>Start the debugger/REPL</li>
     <li>Explore and write tests</li>
     <li>Reach the goal</li>
     <li>Optimize</li>
@@ -683,14 +692,80 @@ Setup a minimal working runtime to start a debugger session!
 ---
 
 <h2 style="color: var(--green);">
-  <emph>T</emph>est <emph>D</emph>riven <emph class="lc">d</emph><span class="lc">esign</span>
+  <emph class="larger">T</emph>est-<emph class="larger">D</emph>riven <emph class="lc larger">d</emph><span class="lc">esign</span>
 </h2>
+
+<span class="small" style="color: var(--r-heading-color);">
+Think about tests before even writing anything.
+<span>
+
+<div class="column">
+  <h3 class="no-wrap" style="color: var(--blue);">
+  Behavior Driven Development
+  </h3>
+  <ul>
+    <li class="small">Create a narrative</li>
+  </ul><br>
+  <pre>
+  <code class="language-gherkin;">
+  AS A: sale representative
+  I WANT: to create a quote quickly
+  SO THAT: the deal can be closed
+  - - -
+  SCENARIO: dashboard
+  GIVEN I select a range
+  WHEN I right-click
+  THEN the dashboard should display
+       cross-sell info</code>
+  <pre>
+</div>
+<div class="column">
+  <pre style="margin-left: 10px; width: fit-content; height: 320px;">
+    <code class="language-python" style="overflow=visible;">class DashboardSuite:
+  func should_return_cross_sell_info {
+    # Arrange
+    dashboard = load_with_mock_data()
+    range_stub = {
+      start: '2024-11-01',
+      end: '2024-11-27' }
+    # Act
+    dashboard.select(range_stub)
+    dashboard.right_click()
+    expected = dashboard.display()
+    # Assert
+    assertVisible expected.cross_sell
+  }</code>
+  </pre>
+  <ul>
+    <li class="small">That devs can translate</li>
+  </ul>
+</div>
+
+<ul class="tips">
+  <li>Cross functional, brings in all stake-holders</li>
+</ul>
 
 ---
 
 <h2>
-  <emph>&lt;T></emph>ype <emph>D</emph>riven <emph class="lc">D</emph>evelopment
+  <emph class="larger">&lt;T></emph>ype-<emph class="larger">D</emph>riven <emph class="larger">D</emph>evelopment
 </h2>
+
+Think about signatures first!
+
+<div class="column">
+  <ul>
+    <li class="small">Functional friendly</li>
+    <li class="small">Compiler catch bugs</li>
+  </ul>
+  <ul class="tips">
+    <li class="small">Null-safety</li>
+    <li class="small">LLM-prototyped tests</li>
+  </ul>
+</div>
+<div class="column">
+<img src="https://media1.giphy.com/media/l3q2MDnkLri1t7i5a/200.gif" alt="" class="gif rounded"></div>
+
 
 ---
 
@@ -705,33 +780,3 @@ Setup a minimal working runtime to start a debugger session!
   </embed>
 </div>
 <div class="column"><img class="rounded" src="assets/qr-code.svg" style="height: 360px; margin-top: -1px;"></img></div>
-
-
-<!-- <section data-background-iframe="https://slides.com" data-background-interactive>
-</section> -->
-
-<!-- --- -->
-
-<!-- ## {auto-animate=true}
-
-<section data-auto-animate="running" data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)" style="top: 235.5px; display: block;" class="present">
-  <div class="r-stack">
-    <div data-id="box1" style="background: var(--green); width: 400px; height: 400px; border-radius: 300px; --darkreader-inline-bgcolor: #00cccc; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage=""></div>
-    <div data-id="box2" style="background: var(--red); width: 300px; height: 300px; border-radius: 300px; --darkreader-inline-bgcolor: #cc00cc; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage=""></div>
-    <div data-id="box1" style="background: var(--yellow); width: 200px; height: 200px; border-radius: 100px; --darkreader-inline-bgcolor: #00cccc; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage="">
-    </div>
-    <div data-id="box3" style="background: var(--cyan); width: 100px; height: 100px; border-radius: 200px; --darkreader-inline-bgcolor: #999900; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage=""></div>
-  </div>
-</section>
-
---
-
-## {auto-animate=true}
-
-<section data-auto-animate="running" data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)" style="top: 145.5px; display: block;" class="present">
-  <div class="r-hstack justify-center"><div data-id="box1" data-auto-animate-delay="1" style="background: var(--green); width: 150px; height: 100px; margin: 10px; --darkreader-inline-bgcolor: #00cccc; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage="" data-auto-animate-target="0"></div>
-  <div data-id="box2" data-auto-animate-delay="0.1" style="background: var(--red); width: 150px; height: 100px; margin: 10px; --darkreader-inline-bgcolor: #cc00cc; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage="" data-auto-animate-target="1"></div>
-  <div data-id="box3" data-auto-animate-delay="0.2" style="background: var(--yellow); width: 150px; height: 100px; margin: 10px; --darkreader-inline-bgcolor: #999900; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage="" data-auto-animate-target="2"></div>
-  <div class="r-hstack justify-center"><div data-id="box1" data-auto-animate-delay="0" style="background: var(--cyan); width: 150px; height: 100px; margin: 10px; --darkreader-inline-bgcolor: #00cccc; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage="" data-auto-animate-target="0"></div>
-  </div>
--->
