@@ -77,6 +77,42 @@
   .rounded {
     border-radius: 5%;
   }
+  .repo {
+    padding: 0; /* Reset padding for the list */
+    margin: 0;
+  }
+  .repo li {
+    list-style: none; /* Remove default bullets */
+    position: relative; /* Allow positioning of the pseudo-element */
+    padding-left: 75px; /* Space for "TIP:" */
+  }
+  .repo li::before {
+    content: "REPO:"; /* Add the "TIP:" text */
+    position: absolute;
+    margin-left: -30px;
+    left: 0;
+    font-style: italic; /* Style as emphasized text */
+    font-weight: bold;
+    color:var(--pink)
+  }
+  .sd {
+    padding: 0; /* Reset padding for the list */
+    margin: 0;
+  }
+  .sd li {
+    list-style: none; /* Remove default bullets */
+    position: relative; /* Allow positioning of the pseudo-element */
+    padding-left: 75px; /* Space for "TIP:" */
+  }
+  .sd li::before {
+    content: "SLIDES:"; /* Add the "TIP:" text */
+    position: absolute;
+    margin-left: -40px;
+    left: 0;
+    font-style: italic; /* Style as emphasized text */
+    font-weight: bold;
+    color:var(--green)
+  }
   .r-stack {
     display: grid;
     grid-template-rows: 100%;
@@ -756,6 +792,12 @@ Think about signatures first!
 
 # Thank you!
 
+<ul class="repo small">
+  <li class="no-wrap small">https://www.github.io/ninocan/talk-testing-demystified/</li>
+</ul>
+<ul class="small sd">
+  <li class="small">https://ninocan.github.io/talk-testing-demystified/</li>
+</ul>
 
 <div class="column">
 <iframe src="https://ninocan.github.io/talk-testing-demystified" width="100%" height="360" frameborder="0" scrolling="no"></iframe>
