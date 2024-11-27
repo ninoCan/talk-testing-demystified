@@ -1,18 +1,3 @@
----
-theme: moon
-title: "Testing Demystified: the boring, the hard, the practical"
-data-background-image: https://www.shadertoy.com/embed/McyyW3?gui=true&t=10&paused=true
----
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fontawesome.com/icons/cards?f=classic&s=solid">
-<link rel="stylesheet" href="plugin/highlight/base16-dracula.css" />
-<script src="plugin/highlight/highlight.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/gherkin.min.js" integrity="sha512-U8Y+a87b+PcvHrlnMoAFHYt9WQPvZbKNt89RUlEuMSLyGlln/e7G66v6NwF4Gopm0/X4ZYYgUY8mD3WdMOr2UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-  Reveal.initialize({
-    plugins: [RevealHighlight],
-  });
-</script>
 <style>
   :root {
     --r-background-color: rgb(33, 34, 44);
@@ -99,7 +84,7 @@ data-background-image: https://www.shadertoy.com/embed/McyyW3?gui=true&t=10&paus
 </style>
 
 
-# <emph>Testing Demystified:</emph>
+# <emph class="no-wrap">Testing Demystified:</emph>
 <h2><em>the boring,</em></h1>
 <h2><strong style="color: var(--r-main-color);">the hard,</strong><h1>
 <h2 style="text-decoration: underline; color: var(--green)">the practical</h1>
@@ -234,9 +219,9 @@ Big Data Engineer<br/>
 ---
 
 
-<div class="third-column"><img style="height:180px;" style="height: 240px;" src="assets/test-shapes/reverse-pyramid.svg"></div>
-<div class="third-column"><img style="height:180px;" src="assets/test-shapes/pyramid.svg"></div>
-<div class="third-column"><img style="height:180px;" src="assets/test-shapes/diamond.svg"></div>
+<div class="third-column"><img style="height:180px;" style="height: 240px;" src="slidedeck/assets/test-shapes/reverse-pyramid.svg"></div>
+<div class="third-column"><img style="height:180px;" src="slidedeck/assets/test-shapes/pyramid.svg"></div>
+<div class="third-column"><img style="height:180px;" src="slidedeck/assets/test-shapes/diamond.svg"></div>
 <div>
 
 #
@@ -244,9 +229,9 @@ Big Data Engineer<br/>
 <!-- <span style="opacity: 0; margin-top: -100px;">This is needed to correctly render the title!</span> -->
   <h2> It depends!</emph> </h2>
 </div>
-<div class="third-column"><img src="assets/test-shapes/ocd-dev.svg"></div>
-<div class="third-column"><img src="assets/test-shapes/true-diamond.svg"></div>
-<div class="third-column"><img src="assets/test-shapes/summer-intern.svg"></div>
+<div class="third-column"><img src="slidedeck/assets/test-shapes/ocd-dev.svg"></div>
+<div class="third-column"><img src="slidedeck/assets/test-shapes/true-diamond.svg"></div>
+<div class="third-column"><img src="slidedeck/assets/test-shapes/summer-intern.svg"></div>
 
 ---
 
@@ -342,7 +327,7 @@ These are the essential components of each tests
 
 <img src="https://i.imgur.com/40VJYpl.jpeg" style="width: 40%; clip-path: inset(6% 2% 2% 2% round 5%); z-index:0"></img>
 
-<img src="assets/arrows/arrow.svg" style="margin-left: -60px; margin-top: -150px; z-index: 2; position: relative;"></img>
+<img src="slidedeck/assets/arrows/arrow.svg" style="margin-left: -60px; margin-top: -150px; z-index: 2; position: relative;"></img>
 
 ---
 
@@ -779,4 +764,4 @@ Think about signatures first!
     src="https://github.com/ninoCan/">
   </embed>
 </div>
-<div class="column"><img class="rounded" src="assets/qr-code.svg" style="height: 360px; margin-top: -1px;"></img></div>
+<div class="column"><img class="rounded" src="slidedeck/assets/qr-code.svg" style="height: 360px; margin-top: -1px;"></img></div>
