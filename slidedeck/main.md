@@ -107,7 +107,7 @@
   .sd li::before {
     content: "SLIDES:"; /* Add the "TIP:" text */
     position: absolute;
-    margin-left: -40px;
+    margin-left: -30px;
     left: 0;
     font-style: italic; /* Style as emphasized text */
     font-weight: bold;
