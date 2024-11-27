@@ -222,7 +222,7 @@ Big Data Engineer<br/>
 
 <div class="third-column">
   <h2 style="color: var(--pink);">Unit</h2>
-<ul style="color: var(--pink);">
+<ul class="fragment" data-fragment-index=2 style="color: var(--pink);">
   <li>finer detail</li>
   <li>isolation</li>
   <li>faster</li>
@@ -231,7 +231,7 @@ Big Data Engineer<br/>
 </div>
 <div class="third-column">
   <h2 style="color: var(--green);">Integration</h2>
-<ul style="color: var(--green);">
+<ul class="fragment" data-fragment-index=3 style="color: var(--green);">
   <li>interfaces</li>
   <li>behavioural</li>
   <li>fast/slow</li>
@@ -240,7 +240,7 @@ Big Data Engineer<br/>
 </div>
 <div class="third-column">
   <h2 style="color: var(--cyan)">End-to-end</h2>
-<ul style="color: var(--cyan);">
+<ul class="fragment" data-fragment-index=4 style="color: var(--cyan);">
   <li>processes</li>
   <li>enseble</li>
   <li>slow</li>
@@ -265,9 +265,9 @@ Big Data Engineer<br/>
 <!-- <span style="opacity: 0; margin-top: -100px;">This is needed to correctly render the title!</span> -->
   <h2> It depends!</emph> </h2>
 </div>
-<div class="third-column"><img src="slidedeck/assets/test-shapes/ocd-dev.svg"></div>
+<div class="third-column fragment" data-fragment-index=2><img src="slidedeck/assets/test-shapes/ocd-dev.svg"></div>
 <div class="third-column"><img src="slidedeck/assets/test-shapes/true-diamond.svg"></div>
-<div class="third-column"><img src="slidedeck/assets/test-shapes/summer-intern.svg"></div>
+<div class="third-column fragment" data-fragment-index=2><img src="slidedeck/assets/test-shapes/summer-intern.svg"></div>
 
 ---
 
@@ -306,7 +306,7 @@ class TestSuite:
   }
 
 ```
-<ul class="tips">
+<ul class="tips fragment">
   <li>DON'T use too many expectations<br></li>
   <li>cluster similar behaviour</li>
 </ul>
@@ -351,7 +351,7 @@ class TestSuite:
 
 </div>
 
-  <ul class="tips">
+  <ul class="tips fragment">
     <li>call the subject <strong>underTest</strong></li>
   </ul>
 
@@ -363,7 +363,7 @@ These are the essential components of each tests
 
 <img src="https://i.imgur.com/40VJYpl.jpeg" style="width: 40%; clip-path: inset(6% 2% 2% 2% round 5%); z-index:0"></img>
 
-<img src="slidedeck/assets/arrows/arrow.svg" style="margin-left: -60px; margin-top: -150px; z-index: 2; position: relative;"></img>
+<img src="slidedeck/assets/arrows/arrow.svg" style="margin-left: -60px; margin-top: -150px; z-index: 2; position: relative;" class="fragment"></img>
 
 ---
 
@@ -395,7 +395,7 @@ assert actual == expected
 
 </div>
 
-<ul class="tips">
+<ul class="tips fragment">
   <li> use in both arrange and act phase</li>
 </ul>
 
@@ -551,7 +551,7 @@ assert mailerService.send
   <li class="small">Control implementation</li>
 </ul>
 </div>
-<ul class="tips">
+<ul class="tips fragment">
   <li class="small no-wrap">Can be queried in expectations</li>
 </ul>
 
@@ -706,7 +706,7 @@ Setup a minimal working runtime to start a debugger session!
     style="height: 350px;">
 </div>
 </span>
-<ul class="tips">
+<ul class="tips fragment">
   <li>Save progress as Unit test</li>
 </ul>
 
@@ -740,7 +740,7 @@ Think about tests before even writing anything.
        cross-sell info</code>
   <pre>
 </div>
-<div class="column">
+<div class="column fragment">
   <pre style="margin-left: 10px; width: fit-content; height: 320px;">
     <code class="language-python" style="overflow=visible;">class DashboardSuite:
   func should_return_cross_sell_info {
@@ -762,7 +762,7 @@ Think about tests before even writing anything.
   </ul>
 </div>
 
-<ul class="tips">
+<ul class="tips fragment">
   <li>Cross functional, brings in all stake-holders</li>
 </ul>
 
@@ -779,7 +779,7 @@ Think about signatures first!
     <li class="small">Functional friendly</li>
     <li class="small">Compiler catch bugs</li>
   </ul>
-  <ul class="tips">
+  <ul class="tips fragment">
     <li class="small">Null-safety</li>
     <li class="small">LLM-prototyped tests</li>
   </ul>
