@@ -132,12 +132,12 @@
 <div class="column" style="margin-top: -90px;">
 <h3 style="margin-top: 130px">Anto"nino" Cangialosi</h3>
 Big Data Engineer<br/>
-@ Agile Lab
-
+<img style="width: 160px;" src="https://www.agilelab.it/hubfs/logo-agilelab.png">
+<br>
 <i class="fa fa-github fa-lg"> </i>
 <i class="fa fa-gitlab fa-lg"> </i>
-<i class="fa fa-slack fa-lg"> ninoCan</i><br/>
-<i class="fa fa-linkedin"> antonino-cangialosi</i>
+<i class="fa fa-slack fa-lg">ninoCan</i><br/>
+<i class="fa fa-linkedin">antonino-cangialosi</i>
 
 </div>
 
