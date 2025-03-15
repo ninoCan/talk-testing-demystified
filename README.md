@@ -2,11 +2,12 @@
 
 # Talk "Testing Demystified: the Hard, the Boring, the Practical"
 
-This repo contains the slide-deck and related material to the talk
-delivered in:
+This repo contains the slide deck and related material to the talk
+delivered at:
  - AppAround 27/11/2024
+ - AgileLab  08/03/2025
 
-The slidedeck can has been made available at following address:
+The slide deck has been made available at the following address:
 https://ninocan.github.io/talk-testing-demystified/index.html
 
 
